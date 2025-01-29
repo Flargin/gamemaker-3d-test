@@ -1,0 +1,1 @@
+vertex_submit(vb_chest, pr_trianglelist, sprite_get_texture(spr_blue, 0));
