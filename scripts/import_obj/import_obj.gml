@@ -83,10 +83,6 @@ function import_obj(filename, vertex_format){
 		}
 	}
 	
-	
-	
-	
-	
 	vertex_end(vb);
 	vertex_freeze(vb);
 	

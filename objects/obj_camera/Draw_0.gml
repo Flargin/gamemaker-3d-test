@@ -14,3 +14,7 @@ camera_set_proj_mat(camera, matrix_build_projection_perspective_fov(60, window_g
 camera_apply(camera);
 
 vertex_submit(vbuffer, pr_trianglelist, -1);
+
+matrix_set(matrix_world, matrix_build(0, -640, 0, 90, 0, 0, 100, 100, 100))
+vertex_submit(vb_sin, pr_trianglelist, 1);
+matrix_set(matrix_world, matrix_build_identity());

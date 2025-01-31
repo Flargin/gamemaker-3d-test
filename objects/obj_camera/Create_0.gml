@@ -33,8 +33,8 @@ vertex_add_point(vbuffer, x1, y1, 100,	0, 0, 1,	0, 0,	c_blue, 1);
 */
 
 
-for(var i = -room_width * 20; i < room_width * 20; i += 32) {
-	for(var j = -room_height * 20; j < room_height * 20; j += 32) {
+for(var i = -room_width * 1; i < room_width * 1; i += 32) {
+	for(var j = -room_height * 200; j < room_height * 200; j += 32) {
 		if((abs(i) % 64 == 0 && abs(j) % 64 == 0) || (abs(i) % 64 > 0 && abs(j) % 64 > 0))
 			var color = c_purple;
 		else	
@@ -51,8 +51,14 @@ for(var i = -room_width * 20; i < room_width * 20; i += 32) {
 	}
 }
 
+
 vertex_end(vbuffer);
+
+vb_sin = import_obj("bru.obj", vertex_format);
+
+
 
 instance_create_depth(0, 0, 0, obj_player);
 
-show_debug_overlay(true);
+show_debug_overlay(false);
+audio_play_sound(snd_theme, 0, true);
